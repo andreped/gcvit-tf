@@ -5,3 +5,4 @@ from .embedding import Stem
 from .feature import Mlp, FeatExtract, ReduceSize, SE, Resizing
 from .block import GCViTBlock
 from .level import GCViTLevel
+from .pooling import AdaptiveAveragePooling2D
