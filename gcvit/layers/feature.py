@@ -259,7 +259,7 @@ class GlobalQueryGen(tf.keras.layers.Layer):
 
 
 @tf.keras.utils.register_keras_serializable(package="gcvit")
-class Resizing(tf.keras.layers.Layer):
+class Resizer(tf.keras.layers.Layer):
     def __init__(self, height, width, interpolation="bilinear", **kwargs):
         self.height = height
         self.width = width

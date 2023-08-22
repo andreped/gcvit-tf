@@ -4,7 +4,7 @@ from .block import GCViTBlock
 from .feature import FitWindow
 from .feature import GlobalQueryGen
 from .feature import ReduceSize
-from .feature import Resizing
+from .feature import Resizer
 
 
 @tf.keras.utils.register_keras_serializable(package="gcvit")
@@ -65,7 +65,7 @@ class GCViTLevel(tf.keras.layers.Layer):
         ]
         self.down = ReduceSize(keep_dim=False, name="downsample")
         self.q_global_gen = GlobalQueryGen(self.keep_dims, name="q_global_gen")
-        self.resize = Resizing(
+        self.resize = Resizer(
             self.window_size, self.window_size, interpolation="bicubic"
         )
         self.fit_window = FitWindow(self.window_size)

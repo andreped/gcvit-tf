@@ -7,7 +7,7 @@ from .feature import SE
 from .feature import FeatExtract
 from .feature import Mlp
 from .feature import ReduceSize
-from .feature import Resizing
+from .feature import Resizer
 from .level import GCViTLevel
 from .pooling import AdaptiveAveragePooling2D
 from .window import window_partition
