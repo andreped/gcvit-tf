@@ -11,10 +11,10 @@ from .feature import Resizing
 class GCViTLevel(tf.keras.layers.Layer):
     def __init__(
         self,
-        depth,
-        num_heads,
-        window_size,
-        keep_dims,
+        depths=(3, 4, 19, 5),
+        num_heads=(4, 8, 16, 32),
+        window_size=(7, 7, 14, 7),
+        keep_dims=(False,),
         downsample=True,
         mlp_ratio=4.0,
         qkv_bias=True,
