@@ -80,10 +80,10 @@ NAME2CONFIG = {
 class GCViT(tf.keras.Model):
     def __init__(
         self,
-        window_size,
-        dim,
-        depths,
-        num_heads,
+        window_size=None,
+        dim=None,
+        depths=None,
+        num_heads=None,
         drop_rate=0.0,
         mlp_ratio=3.0,
         qkv_bias=True,
